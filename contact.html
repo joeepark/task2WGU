@@ -10,23 +10,52 @@
 
 <body>
   <header>
-    <nav id="nav">
+    <nav class="nav contact">
       <span>Learn More About These 2 Cities Here</span>
       <ul>
         <li><a href="index.html">Home</a></li?>
         <li><a href="losangeles.html">Los Angeles</a></li>
         <li><a href="sanfrancisco.html">San Francisco</a></li>
         <li><a href="contact.html"">Contact Us</a></li>
+        <li><a href="references.html">References</a></li>
       </ul>
   </nav>
   </header>
 
   <main>
     <section>
-      <h1>Contact Us</h1>
-    </section>
-  </main>
+            <form id="contact_form">
+            <div id="form_grid">
+              <h1 class="item1">Contact Us</h1>
+              <input type="text" id="first_name" name="first_name" placeholder="First Name" class="item2" required />
+              <input type="text" id="last_name" name="last_name" placeholder="Last Name" class="item3" required />
+              <input type="email" id="email1" name="email" placeholder="E-mail" class="item4" required />
+              <input type="email" id="email2" name="email" placeholder="Confirm E-mail" class="item5" required />
+              <textarea id="message" name="message" placeholder="Type your message here" rows="10" class="item6"
+                required></textarea>
+              <button type="submit" class="submit-btn">Submit</button>
+              <button type="button" class="cancel-btn">Cancel</button>
 
+              <script>
+                document.getElementById('contact_form').addEventListener('submit', function (event) {
+                  var email1Value = document.getElementById('email1').value;
+                  var email2Value = document.getElementById('email2').value;
+                  var email1 = document.getElementById('email1');
+                  var email2 = document.getElementById('email2');
+
+                  if (email1Value.trim() !== '' && email2Value.trim() !== '' && email1Value === email2Value) {
+                    document.getElementById('contact_form').submit();
+                  } else {
+                    event.preventDefault();
+                    email1.style.border = '2px solid red';
+                    email2.style.border = '2px solid red';
+                  }
+                });
+              </script>
+            </div>
+            </form>
+            </section>
+            </main>
 </body>
 
 </html>

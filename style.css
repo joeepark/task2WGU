@@ -16,37 +16,45 @@ a {
   cursor: pointer;
 }
 
-#nav {
+.nav {
   display: flex;
   padding: 1em 2em;
   justify-content: space-between;
   font-size: 1.2rem;
 }
 
-#nav span {
-color: rgb(62, 62, 62);
+.nav span {
+  color: rgb(62, 62, 62);
 }
 
-#nav ul {
+.nav ul {
   display: flex;
   gap: 1em;
   justify-content: flex-end;
   list-style: none;
 }
 
-#nav a {
+.nav a {
   text-decoration: none;
   color: #003566;
   font-weight: 700;
 }
 
-#nav a:hover {
+.nav a:hover {
   color: #f1a223;
 }
 
-#nav span::after {
+.nav span::after {
   content: '\2192';
   margin-left: 5px;
+}
+
+.nav.contact {
+  border: 1px solid black;
+}
+
+.nav.reference {
+  border: 1px solid black;
 }
 
 
@@ -71,40 +79,48 @@ color: rgb(62, 62, 62);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-#home_los_angeles {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 6em 5em;
-  gap: 8em;
-}
-
-#home_los_angeles aside {
-  width: 10%;
-  font-size: 1.2rem;
-  color: #3d405b;
-}
-
-#los_angeles_attractions {
+.home_attractions {
   display: flex;
   flex-direction: column;
   gap: 1em;
   font-size: 1.3rem;
 }
 
-#los_angeles_attractions ul {
-  margin-left: 2em;
+.home_attractions a {
+  float: right;
 }
 
-#los_angeles_attractions p {
+.home_attractions ul {
   margin-left: 1em;
 }
 
-#home_los_angeles img {
+.home_attractions ol {
+  margin-left: 1.2em;
+}
+
+.home_aside {
+  width: 10%;
+  font-size: 1.2rem;
+  color: #3d405b;
+}
+
+.home_img {
   width: 450px;
   height: 450px;
   border-radius: 50%;
   overflow: hidden;
+}
+
+.home_attractions a {
+  margin-left: auto;
+}
+
+#home_los_angeles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6em 5em;
+  gap: 8em;
 }
 
 #home_san_francisco {
@@ -115,32 +131,24 @@ color: rgb(62, 62, 62);
   gap: 6em;
 }
 
-#home_san_francisco aside {
-  width: 10%;
-  font-size: 1.2rem;
-  color: #3d405b;
+/*CITY GENERAL STYLING*/
+.about {
+  padding: 6em 15em;
 }
 
-#san_francisco_attractions {
+.about h2 {
+  padding-bottom: 0.8em;
+  font-size: 2rem;
+}
+
+.info {
   display: flex;
-  flex-direction: column;
-  gap: 1em;
+  gap: 1.5em;
   font-size: 1.3rem;
 }
 
-#san_francisco_attractions ol {
-  margin-left: 2em;
-}
-
-#san_francisco_attractions p {
-  margin-left: 1em;
-}
-
-#home_san_francisco img {
-  width: 450px;
-  height: 450px;
-  border-radius: 50%;
-  overflow: hidden;
+.info aside {
+  width: 30%;
 }
 
 /*LOS ANGELES STYLING*/
@@ -162,4 +170,115 @@ color: rgb(62, 62, 62);
   color: white;
   font-size: 5rem;
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
+}
+
+/*SAN FRANCISCO STYLING*/
+#san_francisco_header {
+  background-image: url('/sfcity.jpg');
+  background-size: cover;
+  background-position: 25% 60%;
+  background-repeat: no-repeat;
+  height: 550px;
+  position: relative;
+}
+
+#san_francisco_header h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 5rem;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
+}
+
+/*CONTACT STYLING*/
+.item1 {
+  grid-area: header;
+}
+
+.item2 {
+  grid-area: first_name;
+}
+
+.item3 {
+  grid-area: last_name;
+}
+
+.item4 {
+  grid-area: email1;
+}
+
+.item5 {
+  grid-area: email2;
+}
+
+.item6 {
+  grid-area: message;
+}
+
+#contact_form {
+  margin-top: 20em;
+}
+
+#form_grid {
+  display: grid;
+  gap: 1em;
+  grid-template-areas:
+    'header header'
+    'first_name last_name'
+    'email1 email1'
+    'email2 email2'
+    'message message';
+  border: 1px solid black;
+  width: 50%;
+  margin: 0 auto;
+  padding: 4em;
+  background-color: #edede9;
+  font-size: 1.1rem;
+}
+
+#contact_form input {
+  padding: 1em;
+}
+
+#contact_form input:focus {
+  box-shadow: 0 1px 0 var(--Grey);
+}
+
+#form_grid button {
+  padding: 1em;
+  color: white;
+  border-radius: .5em;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+#form_grid button:hover {
+  cursor: pointer;
+}
+
+#form_grid button:active {
+  transform: translateY(2.5px);
+}
+
+.submit-btn {
+  background-color: #003566;
+}
+
+.cancel-btn {
+  background-color: #9197b68e;
+}
+
+/*REFERENCES STYLING*/
+.references {
+  display: flex;
+  padding-top: 5em;
+  align-items: center;
+  justify-content: center;
+}
+
+.references td {
+  padding: .6em;
 }
