@@ -1,0 +1,165 @@
+/* GENERAL STYLING */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+}
+
+a {
+  cursor: pointer;
+}
+
+#nav {
+  display: flex;
+  padding: 1em 2em;
+  justify-content: space-between;
+  font-size: 1.2rem;
+}
+
+#nav span {
+color: rgb(62, 62, 62);
+}
+
+#nav ul {
+  display: flex;
+  gap: 1em;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+#nav a {
+  text-decoration: none;
+  color: #003566;
+  font-weight: 700;
+}
+
+#nav a:hover {
+  color: #f1a223;
+}
+
+#nav span::after {
+  content: '\2192';
+  margin-left: 5px;
+}
+
+
+/* HOME PAGE STYLING*/
+#home_header {
+  background-image: url('/palmtrees.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 550px;
+  position: relative;
+}
+
+#home_header h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+#home_los_angeles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6em 5em;
+  gap: 8em;
+}
+
+#home_los_angeles aside {
+  width: 10%;
+  font-size: 1.2rem;
+  color: #3d405b;
+}
+
+#los_angeles_attractions {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  font-size: 1.3rem;
+}
+
+#los_angeles_attractions ul {
+  margin-left: 2em;
+}
+
+#los_angeles_attractions p {
+  margin-left: 1em;
+}
+
+#home_los_angeles img {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#home_san_francisco {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6em 10em 5em 5em;
+  gap: 6em;
+}
+
+#home_san_francisco aside {
+  width: 10%;
+  font-size: 1.2rem;
+  color: #3d405b;
+}
+
+#san_francisco_attractions {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  font-size: 1.3rem;
+}
+
+#san_francisco_attractions ol {
+  margin-left: 2em;
+}
+
+#san_francisco_attractions p {
+  margin-left: 1em;
+}
+
+#home_san_francisco img {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/*LOS ANGELES STYLING*/
+#los_angeles_header {
+  background-image: url('/venice.jpg');
+  background-size: cover;
+  background-position: 25% 42%;
+  background-repeat: no-repeat;
+  height: 550px;
+  position: relative;
+}
+
+#los_angeles_header h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 5rem;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
+}
